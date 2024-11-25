@@ -23,6 +23,7 @@ dependencies:
   - pip
   # gmsh dependencies (prefer not to use apt.txt)
   - xorg-libxft
+  - xorg-libxinerama
   - pip:
       - gmsh
       - gmsh-api
