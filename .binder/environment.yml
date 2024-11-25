@@ -21,6 +21,8 @@ dependencies:
   - ipython
   - pyvista
   - pip
+  # gmsh dependencies (prefer not to use apt.txt)
+  - xorg-libxft
   - pip:
       - gmsh
       - gmsh-api
