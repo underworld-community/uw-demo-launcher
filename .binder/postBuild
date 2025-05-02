@@ -39,7 +39,7 @@ export CC=`which mpicc`
 # Build / install the uw3 in this repo
 
 
-git clone --single-branch --branch main https://github.com/underworldcode/underworld3.git
+git clone --single-branch --branch development https://github.com/underworldcode/underworld3.git
 cd underworld3
 pip install .
 
