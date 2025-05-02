@@ -42,11 +42,11 @@
 git clone --single-branch --branch development https://github.com/underworldcode/underworld3.git
 cd underworld3
 pip install . --no-build-isolation
-#cd ..
+cd ..
 
-#git clone --single-branch --branch development https://github.com/underworldcode/underworld2.git
-#cd underworld2
-#pip install . --no-build-isolation
+git clone --single-branch --branch development https://github.com/underworldcode/underworld2.git
+cd underworld2
+pip install . --no-build-isolation
 
 echo
 echo Completed
