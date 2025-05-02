@@ -36,6 +36,7 @@ dependencies:
   - jupyterlab
   - jupytext
   - pip
+  - git
   - pip:
     - lavavu
     #- badlands comment out for the following for now
