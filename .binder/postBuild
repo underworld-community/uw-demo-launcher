@@ -16,6 +16,12 @@ cd ..
 
 git clone --single-branch https://github.com/underworld-community/uw-demo-bitsnpieces.git ./uw-demo
 
+
+wget https://github.com/underworldcode/underworld3-documentation/archive/refs/heads/main.zip
+unzip main.zip "underworld3-documentation-main/Notebooks/Examples-Loop-Mesh/*"
+mv underworld3-documentation-main/Notebooks/Examples-Loop-Mesh ./Examples-Loop-Mesh
+rm -rf main.zip underworld3-documentation-main
+
 echo
 echo "Build at" > ~/.time_of_creation
 date >> ~/.time_of_creation
