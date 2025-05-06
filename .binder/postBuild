@@ -17,5 +17,6 @@ cd ..
 git clone --single-branch https://github.com/underworld-community/uw-demo-bitsnpieces.git ./uw-demo
 
 echo
-echo Completed
+echo "Build at" > ~/.time_of_creation
+date >> ~/.time_of_creation
 echo
