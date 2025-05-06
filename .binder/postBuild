@@ -23,6 +23,6 @@ mv underworld3-documentation-main/Notebooks/Examples-Loop-Mesh ./Examples-Loop-M
 rm -rf main.zip underworld3-documentation-main
 
 echo
-echo "Build at" > ~/.time_of_creation
-date >> ~/.time_of_creation
+echo "Build at" > ~/.time_of_env_creation
+date >> ~/.time_of_env_creation
 echo
