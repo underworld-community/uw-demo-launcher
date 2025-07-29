@@ -39,8 +39,8 @@ dependencies:
   - git
   - pip:
     - lavavu
-    - pygmsh
-    - rich<14
-    - meshio
+    # - pygmsh
+    # - rich<14
+    # - meshio
     #- badlands comment out for the following for now
     - "badlands @ git+https://github.com/julesghub/badlands.git@julesghub/meson-build#subdirectory=badlands"
