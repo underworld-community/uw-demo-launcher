@@ -1,5 +1,7 @@
 #!/bin/bash -v
 
+set -e
+
 
 # Build / install the uw2 + uw3 in this repo
 
