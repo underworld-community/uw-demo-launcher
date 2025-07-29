@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Quick rebuild of latest version
+# Quick rebuild of latest version of uw3
 
 cd underworld3
 git stash
