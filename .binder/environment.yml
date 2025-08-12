@@ -21,13 +21,10 @@ dependencies:
   - mpi4py
   - h5py=*=mpi*
   - pyvista
-  - trame-vtk
-  - trame-vuetify
   - pygments
   - typeguard
   - ipywidgets
   - trame
-  - gmsh
   - python-gmsh
   - python-xxhash
   - pytest
@@ -37,10 +34,15 @@ dependencies:
   - jupytext
   - pip
   - git
+  - gmsh
+  - xorg-libxft
+  - xorg-libxinerama
   - pip:
     - lavavu
-    # - pygmsh
-    # - rich<14
-    # - meshio
-    #- badlands comment out for the following for now
+    - gmsh-api
+    - jupyterlab
+    - jupytext
+    - pygments
+    - trame-vtk
+    - trame-vuetify    #- badlands comment out for the following for now
     - "badlands @ git+https://github.com/julesghub/badlands.git@julesghub/meson-build#subdirectory=badlands"
