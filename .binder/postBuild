@@ -2,6 +2,11 @@
 
 set -e
 
+# gmsh installation just seems to be messed up. It works
+# if we install via gmsh and then uninstall / reinstall via pip
+
+mamba uninstall gmsh --no-prune-deps
+pip install gmsh
 
 # Build / install the uw2 + uw3 in this repo
 
@@ -17,7 +22,6 @@ pip install . --no-build-isolation
 cd ..
 
 git clone --single-branch https://github.com/underworld-community/uw-demo-bitsnpieces.git ./uw-demo
-
 
 wget https://github.com/underworldcode/underworld3-documentation/archive/refs/heads/main.zip
 unzip main.zip "underworld3-documentation-main/Notebooks/Examples-Loop-Mesh/*"
