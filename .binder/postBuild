@@ -1,7 +1,5 @@
 #!/bin/bash -v
 
-set -e
-
 # gmsh installation just seems to be messed up. It works
 # if we install via gmsh and then uninstall / reinstall via pip
 
