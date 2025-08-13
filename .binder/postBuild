@@ -3,6 +3,10 @@
 # gmsh installation just seems to be messed up. It works
 # if we install via gmsh and then uninstall / reinstall via pip
 
+mamba env list
+mamba init
+mamba activate notebook
+
 mamba uninstall gmsh --no-prune-deps
 pip install gmsh
 
