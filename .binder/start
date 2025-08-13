@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Quick rebuild of latest version of uw3
 
 cd underworld3
@@ -10,8 +12,6 @@ cd ..
 
 ## This is not required for the conda-forge version of petsc but
 ## it is needed if we install the uw3_env dependencies
-
-
 
 export PYTHONPATH=$CONDA_PREFIX/lib/ 
 
