@@ -1,26 +1,26 @@
-#!/bin/bash -v
+#!/bin/bash
+set -e
 
-# gmsh installation just seems to be messed up. It works
-# if we install via gmsh and then uninstall / reinstall via pip
+# Install pixi
+curl -fsSL https://pixi.sh/install.sh | sh
+export PATH="$HOME/.pixi/bin:$PATH"
 
-mamba env list
-mamba init
-mamba activate notebook
-
-mamba uninstall gmsh --no-prune-deps
-pip install gmsh
-
-# Build / install underworld3 from uw3-release-candidate branch
-
+# Clone underworld3 from uw3-release-candidate branch
 git clone --single-branch --branch uw3-release-candidate https://github.com/underworldcode/underworld3.git
 cd underworld3
-pip install . --no-build-isolation
+
+# Install runtime environment via pixi (fast resolver)
+pixi install -e runtime
+
+# Build underworld3
+pixi run -e runtime build
+
+# Install Jupyter kernel pointing to pixi environment
+pixi run -e runtime python -m ipykernel install --user --name=uw3 --display-name="Underworld3"
+
 cd ..
 
 # Copy beginner tutorials to workspace
 cp -r underworld3/docs/beginner/tutorials ./Tutorials
 
-echo
-echo "Build at" > ~/.time_of_env_creation
-date >> ~/.time_of_env_creation
-echo
+echo "Build completed at $(date)" > ~/.time_of_env_creation

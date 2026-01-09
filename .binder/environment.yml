@@ -1,39 +1,8 @@
-name: uw-demo
+name: bootstrap
 channels:
   - conda-forge
 dependencies:
-  - python==3.11
-  - compilers
-  - pkg-config
-  - pint
-  - mpich
-  - petsc>=3.23
-  - petsc4py>=3.23
-  - cython=3.*
-  - sympy
-  - mesalib
-  - numpy<2
-  - scipy
-  - mpi4py
-  - h5py=*=mpi*
-  - pyvista
-  - pygments
-  - typeguard
-  - ipywidgets
-  - trame
-  - python-gmsh
-  - python-xxhash
-  - pytest
-  - nbmake
-  - matplotlib
-  - jupyterlab
-  - jupytext
+  - python=3.12
   - pip
+  - curl
   - git
-  - gmsh
-  - xorg-libxft
-  - xorg-libxinerama
-  - pip:
-    - gmsh-api
-    - trame-vtk
-    - trame-vuetify
