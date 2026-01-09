@@ -2,17 +2,21 @@
 
 set -e
 
-# Quick rebuild of latest version of uw3
+# Quick rebuild of latest version of uw3 from uw3-release-candidate branch
 
 cd underworld3
 git stash
-git pull
+git checkout uw3-release-candidate
+git pull origin uw3-release-candidate
 pip install . --no-build-isolation
 cd ..
+
+# Update tutorials if changed
+cp -r underworld3/docs/beginner/tutorials/* ./Tutorials/ 2>/dev/null || true
 
 ## This is not required for the conda-forge version of petsc but
 ## it is needed if we install the uw3_env dependencies
 
-export PYTHONPATH=$CONDA_PREFIX/lib/ 
+export PYTHONPATH=$CONDA_PREFIX/lib/
 
 exec "$@"

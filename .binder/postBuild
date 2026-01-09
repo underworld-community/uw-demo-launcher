@@ -10,25 +10,15 @@ mamba activate notebook
 mamba uninstall gmsh --no-prune-deps
 pip install gmsh
 
-# Build / install the uw2 + uw3 in this repo
+# Build / install underworld3 from uw3-release-candidate branch
 
-
-git clone --single-branch --branch development https://github.com/underworldcode/underworld3.git
+git clone --single-branch --branch uw3-release-candidate https://github.com/underworldcode/underworld3.git
 cd underworld3
-./compile.sh
-cd ..
-
-git clone --single-branch --branch development https://github.com/underworldcode/underworld2.git
-cd underworld2
 pip install . --no-build-isolation
 cd ..
 
-git clone --single-branch https://github.com/underworld-community/uw-demo-bitsnpieces.git ./uw-demo
-
-wget https://github.com/underworldcode/underworld3-documentation/archive/refs/heads/main.zip
-unzip main.zip "underworld3-documentation-main/Notebooks/Examples-Loop-Mesh/*"
-mv underworld3-documentation-main/Notebooks/Examples-Loop-Mesh ./Examples-Loop-Mesh
-rm -rf main.zip underworld3-documentation-main
+# Copy beginner tutorials to workspace
+cp -r underworld3/docs/beginner/tutorials ./Tutorials
 
 echo
 echo "Build at" > ~/.time_of_env_creation
