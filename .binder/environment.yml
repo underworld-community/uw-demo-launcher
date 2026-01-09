@@ -7,8 +7,8 @@ dependencies:
   - pkg-config
   - pint
   - mpich
-  - petsc==3.21.5
-  - petsc4py==3.21.5
+  - petsc>=3.23
+  - petsc4py>=3.23
   - cython=3.*
   - sympy
   - mesalib
