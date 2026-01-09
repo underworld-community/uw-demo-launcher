@@ -1,17 +1,11 @@
 #!/bin/bash
-set -e
 
+# Add pixi to PATH for the session
 export PATH="$HOME/.pixi/bin:$PATH"
 
-# Quick rebuild of latest uw3 from uw3-release-candidate
+# Activate pixi environment for Jupyter
 cd underworld3
-git stash
-git checkout uw3-release-candidate
-git pull origin uw3-release-candidate
-pixi run -e runtime build
+eval "$(pixi shell-hook -e runtime)"
 cd ..
-
-# Update tutorials if changed
-cp -r underworld3/docs/beginner/tutorials/* ./Tutorials/ 2>/dev/null || true
 
 exec "$@"
